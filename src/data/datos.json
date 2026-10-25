@@ -1,0 +1,77 @@
+{
+  "horarios": [
+    {
+      "id": 1,
+      "dia": "Lunes",
+      "hora": "7:00 AM",
+      "tipo": "Residuos generales",
+      "sector": "Sector asignado"
+    },
+    {
+      "id": 2,
+      "dia": "Miércoles",
+      "hora": "8:00 AM",
+      "tipo": "Reciclaje",
+      "sector": "Sector asignado"
+    },
+    {
+      "id": 3,
+      "dia": "Viernes",
+      "hora": "7:30 AM",
+      "tipo": "Orgánicos",
+      "sector": "Sector asignado"
+    }
+  ],
+  "notificaciones": [
+    {
+      "id": 1,
+      "titulo": "Recolección próxima",
+      "mensaje": "La próxima recolección de residuos generales está programada para el lunes a las 7:00 AM.",
+      "hora": "Hoy"
+    },
+    {
+      "id": 2,
+      "titulo": "Día de reciclaje",
+      "mensaje": "Recuerda separar tus materiales reciclables antes de la recolección del miércoles.",
+      "hora": "Ayer"
+    },
+    {
+      "id": 3,
+      "titulo": "Información ambiental",
+      "mensaje": "Consulta la sección de reciclaje para conocer cómo clasificar tus residuos.",
+      "hora": "Hace 2 días"
+    }
+  ],
+  "residuos": [
+    {
+      "id": 1,
+      "nombre": "Orgánicos",
+      "color": "Verde",
+      "descripcion": "Incluye residuos de alimentos y otros materiales orgánicos."
+    },
+    {
+      "id": 2,
+      "nombre": "Plástico",
+      "color": "Blanco",
+      "descripcion": "Incluye envases y recipientes plásticos que puedan ser aprovechados."
+    },
+    {
+      "id": 3,
+      "nombre": "Vidrio",
+      "color": "Blanco",
+      "descripcion": "Incluye botellas y recipientes de vidrio limpios y aprovechables."
+    },
+    {
+      "id": 4,
+      "nombre": "Papel y cartón",
+      "color": "Blanco",
+      "descripcion": "Incluye hojas, cajas y otros productos de papel y cartón aprovechables."
+    },
+    {
+      "id": 5,
+      "nombre": "Metal",
+      "color": "Blanco",
+      "descripcion": "Incluye latas y otros elementos metálicos que puedan reciclarse."
+    }
+  ]
+}
