@@ -1,0 +1,14 @@
+{
+  "info": { "name": "NICE WORLD API REST", "description": "Pruebas de autenticación y CRUD de usuarios. Ejecutar registro/login antes de las rutas protegidas.", "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json" },
+  "variable": [{"key":"baseUrl","value":"http://localhost:3000/api"},{"key":"token","value":"PEGAR_TOKEN_DE_LOGIN"},{"key":"usuarioId","value":"1"}],
+  "item": [
+    {"name":"Salud API (GET)","request":{"method":"GET","url":"{{baseUrl}}/health"}},
+    {"name":"Registrar cuenta (POST)","request":{"method":"POST","header":[{"key":"Content-Type","value":"application/json"}],"body":{"mode":"raw","raw":"{\n  \"nombre\": \"Emmanuel\",\n  \"correo\": \"emmanuel@example.com\",\n  \"password\": \"ClaveSegura123\"\n}"},"url":"{{baseUrl}}/auth/register"}},
+    {"name":"Iniciar sesión (POST)","request":{"method":"POST","header":[{"key":"Content-Type","value":"application/json"}],"body":{"mode":"raw","raw":"{\n  \"correo\": \"emmanuel@example.com\",\n  \"password\": \"ClaveSegura123\"\n}"},"url":"{{baseUrl}}/auth/login"}},
+    {"name":"Listar usuarios (GET)","request":{"method":"GET","header":[{"key":"Authorization","value":"Bearer {{token}}"}],"url":"{{baseUrl}}/usuarios"}},
+    {"name":"Consultar usuario (GET)","request":{"method":"GET","header":[{"key":"Authorization","value":"Bearer {{token}}"}],"url":"{{baseUrl}}/usuarios/{{usuarioId}}"}},
+    {"name":"Crear usuario (POST)","request":{"method":"POST","header":[{"key":"Authorization","value":"Bearer {{token}}"},{"key":"Content-Type","value":"application/json"}],"body":{"mode":"raw","raw":"{\n  \"nombre\": \"Usuario de prueba\",\n  \"correo\": \"prueba@example.com\",\n  \"password\": \"ClaveSegura123\"\n}"},"url":"{{baseUrl}}/usuarios"}},
+    {"name":"Actualizar usuario (PUT)","request":{"method":"PUT","header":[{"key":"Authorization","value":"Bearer {{token}}"},{"key":"Content-Type","value":"application/json"}],"body":{"mode":"raw","raw":"{\n  \"nombre\": \"Nombre actualizado\"\n}"},"url":"{{baseUrl}}/usuarios/{{usuarioId}}"}},
+    {"name":"Eliminar usuario (DELETE)","request":{"method":"DELETE","header":[{"key":"Authorization","value":"Bearer {{token}}"}],"url":"{{baseUrl}}/usuarios/{{usuarioId}}"}}
+  ]
+}

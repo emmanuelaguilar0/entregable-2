@@ -1,0 +1,12 @@
+import { Router } from 'express';
+import * as controller from '../controllers/usuario.controller.js';
+import { autenticar } from '../middlewares/autenticacion.js';
+import { validarActualizacion, validarId, validarRegistro } from '../middlewares/validaciones.js';
+const router = Router();
+router.use(autenticar);
+router.get('/', controller.obtenerUsuarios);
+router.post('/', validarRegistro, controller.crear);
+router.get('/:id', validarId, controller.obtenerUsuario);
+router.put('/:id', validarId, validarActualizacion, controller.actualizar);
+router.delete('/:id', validarId, controller.eliminar);
+export default router;
